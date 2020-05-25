@@ -1,0 +1,27 @@
+div#contenedor2 {
+  background-image: linear-gradient(
+        200deg, 
+        rgba(255, 87, 51) 50%, 
+        rgba(255, 94, 94) 87%);
+    color: white;
+    margin-top: 15;
+    overflow: auto;
+    padding: 0px 5px;
+    width: 550px;
+    margin: auto;
+    border-radius: 10px;
+     text-align: center;
+}     
+
+div#contenedor3 {
+  background-color:#FF5E5E;
+    color: white;
+    margin-top: 15;
+    overflow: auto;
+    padding: 0px 5px;
+    width: 650px;
+    margin: auto;
+    border-radius: 10px;
+     text-align: center;
+}     
+

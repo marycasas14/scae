@@ -1,0 +1,50 @@
+
+
+<html>
+   <head>
+   <title>
+   Ejemplo
+   </title>
+
+   
+    </head>
+    <body>
+   
+    <h1>Solicitudes Pendientes <small>SCAE</small></h1>
+    <CENTER> 
+    <p><BR><h2>B O L E T A </h2>
+    <form action="visualizar_solicitud.php" method="post">
+    <select name="boleta">
+                 <?php 
+                        include 'con_db.php';
+                        $query=mysqli_query($conex,"SELECT boleta  FROM solicitud");
+                        while($datos = mysqli_fetch_array($query))
+                        {
+                    ?>
+                            <option value="<?php echo $datos['boleta']?>"> <?php echo $datos['boleta']?> </option>
+                    <?php
+                        }
+                    ?> 
+
+   </select>
+   </p>
+  
+    <p><br><input type="submit" value="visualizar" name="visualizar"></p>
+    <p><input type="button" id="recargar" value="Actualizar"></p>
+    </CENTER>
+   
+  
+     <?php 
+     include("visualizar_solicitud.php");
+      ?>
+
+    </body>
+
+    
+<script>
+    $("#recargar").click(function(){
+        location.reload();
+    });
+</script>
+    </html>
+
